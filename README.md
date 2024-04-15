@@ -78,8 +78,67 @@ This is a work in progress. Spoiler alert: Loud uses dual MAX98357 DACs with 3W 
 
 ## Software
 
-todo
+### Audio
 
+The first thing to do is to follow the official [tutorial](https://onion.io/2bt-omega-i2s-audio/). The only pitfall is that you need to use a firmware build before b195. I used b193 to be more specific. A full list of old builds can be found [here](https://docs.onion.io/omega2-docs/manual-firmware-installation.html), and instructions on how to flash custom firmware are [here](https://docs.onion.io/omega2-docs/manual-firmware-installation.html). Short version is below
+
+```bash
+$ cd /tmp
+# For Omega 2 Plus
+$ wget http://repo.onion.io.s3.amazonaws.com/omega2/images/omega2p-v0.2.0-b193.bin
+$ sysupgrade ./omega2p-v0.2.0-b193.bin
+# or Omega 2 
+$ wget http://repo.onion.io.s3.amazonaws.com/omega2/images/omega2-v0.2.0-b193.bin 
+$ sysupgrade ./omega2-v0.2.0-b193.bin 
+```
+
+The issue with later versions is that at some point I2S [was disabled](https://community.onion.io/topic/3255/trying-to-get-the-i2s-audio-working/7) in favor of PWM working on the same pins. It can be restored, but requires a bit more effort.
+
+As soon as you have proper firmware installed you need to issue the following commands
+
+```bash
+# install necessary packages
+$ opkg update
+$ opkg install alsa-utils mpg123
+# enable I2S
+$ omega2-ctrl gpiomux set i2s i2s
+
+# Verify that souncard is present
+$ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: AudioI2S [Audio-I2S], device 0: ralink-i2s-HiFi HiFi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+# Test audio with any audio file or stream, I used my local stream here
+
+$ mpg123 http://192.168.1.42:8000/fg
+High Performance MPEG 1.0/2.0/2.5 Audio Player for Layers 1, 2 and 3
+	version 1.22.3; written and copyright by Michael Hipp and others
+	free software (LGPL) without any warranty but with best wishes
+
+Directory: http://192.168.1.42:8000/
+Playing MPEG stream 1 of 1: fg ...
+ICY-NAME: Fabio & Grooverider
+ICY-URL: http://www.icecast.org/
+
+MPEG 1.0 layer III, 128 kbit/s, 44100 Hz joint-stereo
+
+ICY-META: StreamTitle='ÿþR - ÿþF';
+```
+
+Voila, we have a sound!
+
+### Running pulse-server 
+
+There is quite an old [write-up](https://hackaday.io/project/173621/log/188685-streaming-audio-over-network) that I did in the past. It should be still applicable and fully compatible with HiFi Omega
+
+### Screen, IR, RGB led.
+
+This is still a work in progress since it is not one-step instruction. Some links might help to get started
+
+- [Ledchain for MT7688](https://github.com/plan44/plan44-feed/tree/master/p44-ledchain)
+- [LIRC on Onion](https://community.onion.io/topic/951/lirc-or-arduino-serial/2) and [another one](https://community.onion.io/topic/371/has-anyone-gotten-lirc-cross-compiled)
 
 ## Hardware
 
@@ -88,6 +147,25 @@ todo
 | Image coming soon | ![DSC_0717_small JPG-mh](https://github.com/sonocotta/onion-omega-media-center/assets/5459747/43d97a98-52ca-4b67-bd46-684fa9093b58) | ![DSC_0714_small JPG-mh](https://github.com/sonocotta/onion-omega-media-center/assets/5459747/9597f89d-0ac6-4a34-801f-b61629dded29)
 
 Please visit [hardware](/hardware/) section for board schematics and PCB designs. Note that PCBs are shared as multi-layer PDFs as well as Gerber archives.
+
+### Useful links
+
+- [Using antennas with the Omega](https://onion.io/2bt-u-fl-antennas-with-the-omega/)
+- [turning off](https://community.onion.io/topic/2000/turning-off-wifi) or [disabling](https://community.onion.io/topic/1502/disable-wifi-hardware) WiFi
+
+## To Do
+
+Many things I'd try to do if I had a few more extra hours in the day.
+
+- Cross-compile [librespot](https://github.com/librespot-org/librespot)
+- Cross-compile [snapcast](https://github.com/badaix/snapcast)
+- Cross-compile Airplay
+- Cross-compile LMS client
+- Connect to Home Assistant using any of the above
+- Configure the TFT Screen and show the VU-meter on it
+- Configure LED Strip and IR reader
+
+If you have more time and skills than I do and are ready to check some of those out, please [contact me](mailto:andriy@sonocotta.com) directly. I will try sponsoring the board for you, as long as I have stock available.
 
 ## Where to buy
 
