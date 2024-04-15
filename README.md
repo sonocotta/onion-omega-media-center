@@ -60,20 +60,20 @@ This is a work in progress. Spoiler alert: Loud uses dual MAX98357 DACs with 3W 
 
 |       | I2S CLK | I2S DATA | I2S WS | 
 |-------|---------|----------|--------|
-| Onion Omega Zero | 3      | 1       | 2     | 
+| Onion Omega | 3      | 1       | 2     | 
 
 ### Screen
 
 |       | SPI CLK  |SPI MOSI| SPI MISO | SPI CS   | DC   | RES  |  LED | 
 |-------|----------|--------|----------|-----------|-----------|-----------|---------|
-| Onion Omega Zero |  7     |  8   |   9      |   6  | 18      |     19     | 15        | 
+| Onion Omega |  7     |  8   |   9      |   6  | 18      |     19     | 15        | 
 
 
 ### Other
 
 |       | RGB LED  | IR INPUT | RELAY OUTPUT | 
 |-------|----------|--------|----------|
-| Onion Omega Zero |  17      |  16    |   11      |  
+| Onion Omega |  17      |  16    |   11      |  
 
 
 ## Software
