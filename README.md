@@ -3,27 +3,27 @@
 ![Open Source Hardware](/images/open-source-hardware-logo.png)
 ![Open Source Software](/images/open-source-software-logo.png)
 
-![DSC_0733](https://github.com/sonocotta/raspberry-media-center/assets/5459747/2a6729d0-b9ed-4b83-95d5-de66f2ad8bb1)
+![DSC_0717](https://github.com/sonocotta/onion-omega-media-center/assets/5459747/e4f8ee2f-6547-494d-874e-77a47a807049)
 
-Onion Omega Media Center is a series of Onion Omega based media center devices. They share a similar look, and compared to my earlier designs, they have a great-looking aluminum case.
+Onion Omega Media Center is a series of Onion Omega-based media center devices. They share a similar look, and compared to my earlier designs, they have a great-looking aluminum case.
 
 ## Motivation
 
-I did few audio projects in the past, some using [ESP32](https://hackaday.io/project/173620-loud-esp), some using larger [Orange Pi](https://hackaday.io/project/191936-orange-pi-home-media-center) and [Raspberry Pi](https://hackaday.io/project/195272-raspberry-pi-media-center) devices. Each has its pros and cons, and each iteration I'm trying to focus on the details that were working best for me, while actually using them. 
+I did few audio projects in the past, some using [ESP32](https://hackaday.io/project/173620-loud-esp), some using larger [Orange Pi](https://hackaday.io/project/191936-orange-pi-home-media-center) and [Raspberry Pi](https://hackaday.io/project/195272-raspberry-pi-media-center) devices. Each has its pros and cons, and with each iteration, I'm trying to focus on the details that were working best for me, while actually using them. 
 
-What is special about the Onion Omega is how it is lightweight and powerfull at the same time. Based on OpenWRT firmware it is impossible to break (same are used bu domestic wifi-routers). It uses onboard SPI storage, so it is not wear out, like SD-cards are. It boots in seconds and support major high level languages, as well as C/C++. It's up to you and your skillset.
+What is special about the Onion Omega is how it is lightweight and powerful at the same time. Based on OpenWRT firmware it is impossible to break (same are used by domestic wifi-routers). It uses onboard SPI storage, so it does not wear out, like SD cards are. It boots in seconds and supports major high-level languages, as well as C/C++. It's up to you and your skill set.
 
-Sure, compared to the ESP32 platform it is not as lightweight, but it is as close as it gets, while giving you plenty of memory and space. But when it comes to rapid development, it os other world, compared to ESP32.
+Sure, compared to the ESP32 platform it is not as lightweight, but it is as close as it gets while giving you plenty of memory and space. But when it comes to rapid development, it is another world, compared to ESP32.
 
 ## Onion Omega HiFi
 
 Onion Omega HiFi is a first-in-line product that uses the legendary PCM5100 series DAC with supreme audio quality. It exposes line-level output that you can plug into a stereo amplifier. Spend as much as you need on the external amp to deliver the sound you like (personally I prefer late 80's audio gear).
 
-![DSC_0727](https://github.com/sonocotta/raspberry-media-center/assets/5459747/029e5175-1ee1-4876-8ba3-91d49730c29f)
+![DSC_0722](https://github.com/sonocotta/onion-omega-media-center/assets/5459747/210d950e-39bd-49e9-8bcf-66397146397f)
 
 ## Loud and Louder Onion Omega
 
-This is a work in progress. Spoiler alert: Loud uses dual MAX98357 DACs with 3W per each of two channels. Louder in its turn uses TI TAS5805M DAC with dual 22W output.
+This is a work in progress. Spoiler alert: Loud uses dual MAX98357 DACs with 3W per each of the two channels. Louder in its turn uses TI TAS5805M DAC with dual 22W output.
 
 ## HiFi Onion Features
 
@@ -76,7 +76,7 @@ This is a work in progress. Spoiler alert: Loud uses dual MAX98357 DACs with 3W 
 | Onion Omega Zero |  17      |  16    |   11      |  
 
 
-## Software samples
+## Software
 
 todo
 
@@ -85,7 +85,7 @@ todo
 
 | Front | Back | PCB |
 |---|---|---|
-| ![DSC_0730 (copy 1) JPG-mh (1)](https://github.com/sonocotta/raspberry-media-center/assets/5459747/c281dab2-9842-4760-be31-8ad52d836f4d) | ![DSC_0733 (copy 1) JPG-mh](https://github.com/sonocotta/raspberry-media-center/assets/5459747/ba11555c-9e0c-47eb-b77e-4ac4b4ca1a99) | ![DSC_0739 (copy 1) JPG-mh](https://github.com/sonocotta/raspberry-media-center/assets/5459747/b438fd68-108c-42b6-b3b1-4c2507fbd568)
+| Image coming soon | ![DSC_0717_small JPG-mh](https://github.com/sonocotta/onion-omega-media-center/assets/5459747/43d97a98-52ca-4b67-bd46-684fa9093b58) | ![DSC_0714_small JPG-mh](https://github.com/sonocotta/onion-omega-media-center/assets/5459747/9597f89d-0ac6-4a34-801f-b61629dded29)
 
 Please visit [hardware](/hardware/) section for board schematics and PCB designs. Note that PCBs are shared as multi-layer PDFs as well as Gerber archives.
 
