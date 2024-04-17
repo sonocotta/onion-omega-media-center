@@ -169,4 +169,4 @@ If you have more time and skills than I do and are ready to check some of those 
 
 ## Where to buy
 
-You may support our work by ordering this product at Tindie (coming soon)
+You may support our work by ordering this product at [Tindie](https://www.tindie.com/products/sonocotta/onion-omega-media-center/)
