@@ -7,6 +7,30 @@
 
 Onion Omega Media Center is a series of Onion Omega-based media center devices. They share a similar look, and compared to my earlier designs, they have a great-looking aluminum case.
 
+## Table of Contents
+
+- [Onion Omega Media Center](#onion-omega-media-center)
+  - [Motivation](#motivation)
+  - [Onion Omega HiFi](#onion-omega-hifi)
+  - [Loud and Louder Onion Omega](#loud-and-louder-onion-omega)
+  - [HiFi Onion Features](#hifi-onion-features)
+      - [Onion Omega itself](#onion-omega-itself)
+      - [DAC section](#dac-section)
+      - [Other Peripheral](#other-peripheral)
+  - [Board Pinout](#board-pinout)
+    - [Audio](#audio)
+    - [Screen](#screen)
+    - [Other](#other)
+  - [Software](#software)
+    - [Audio](#audio-1)
+    - [Running pulse-server](#running-pulse-server)
+    - [Screen, IR, RGB led.](#screen-ir-rgb-led)
+  - [Hardware](#hardware)
+    - [Useful links](#useful-links)
+  - [To Do](#to-do)
+  - [Where to buy](#where-to-buy)
+
+
 ## Motivation
 
 I did few audio projects in the past, some using [ESP32](https://hackaday.io/project/173620-loud-esp), some using larger [Orange Pi](https://hackaday.io/project/191936-orange-pi-home-media-center) and [Raspberry Pi](https://hackaday.io/project/195272-raspberry-pi-media-center) devices. Each has its pros and cons, and with each iteration, I'm trying to focus on the details that were working best for me, while actually using them. 
